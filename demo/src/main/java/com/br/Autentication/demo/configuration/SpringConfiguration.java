@@ -1,4 +1,4 @@
-package com.br.Autentication.demo;
+package com.br.Autentication.demo.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
