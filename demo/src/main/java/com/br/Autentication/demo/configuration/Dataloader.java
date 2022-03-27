@@ -8,11 +8,11 @@ import com.br.Autentication.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 
+@Component
 public class Dataloader implements CommandLineRunner {
 
 
@@ -27,8 +27,8 @@ public class Dataloader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        roleRepository.save(new Roles());
-        roleRepository.save(new Roles());
+        roleRepository.save(new Roles("ADMIN"));
+        roleRepository.save(new Roles("USER"));
 
         Roles adminRole = roleRepository.findByRole("ADMIN");
         Roles userRole = roleRepository.findByRole("USER");

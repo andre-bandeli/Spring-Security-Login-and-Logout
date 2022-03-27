@@ -22,9 +22,8 @@ public class Roles {
     public Roles() {
     }
 
-    public Roles(String role, Collection<User> users) {
+    public Roles(String role) {
         this.role = role;
-        this.users = users;
     }
 
     public long getId() {
